@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="log.css">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>Login and Registration</title>
+</head>
+<body>
+    
+      
+            
+                <div class="hero">
+                      <div class="formbox">
+                            <div class="btnbox">
+                                <div id="btn"></div>
+                                <button type="button" class="toglebtn" onclick="login()">Log In</button>
+                                <button type="button" class="toglebtn" onclick="register()">Register</button>
+                                
+                            </div>
+                            <div class="socialicon">
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <img src="./img/facebook.png" alt=""></a>
+                                    <a href="https://www.instagram.com" target="_blank">
+                                        <img src="./img/instagram.png" alt=""></a>
+                               <a href="https://www.google.com" target="_blank">
+                                <img src="./img/google.png" alt=""></a>
+                               
+                               
+                            </div>
+                            <form id="login" action="#" class="inputgroup" >
+                               <input required type="text" class="inputfield" placeholder="User Id" required>
+                               <input required type="text" class="inputfield" placeholder="Enter Password" required >
+                               <input type="checkbox" class="checkbox">
+                               <span class="sp1">Remember Password</span>
+                               <a href="index.html" target="_blank">
+                                   <button type="button" class="btnsubmit" >Log In</button></a>
+                               
+                            </form>
+                            <form   id="register" action="#" class="inputgroup" onsubmit="return validation()">
+                                <input type="text" class="inputfield" id="user" placeholder="User Id" required autocomplete="off" required>
+                                <span id="username" class="text-danger font-weight-bold"></span>
+                                <input type="email"class="inputfield" placeholder="Email Id" required autocomplete="off" required>
+                                <input type="text" class="inputfield" placeholder="Enter Password" required autocomplete="off" required>
+                                <input type="checkbox" class="checkbox">
+                                <span> I agree to the terms & Conditions</span>
+                                <a href="index.html" target="_blank">
+                                <button type="button" name="button" class="btnsubmit">Register</button></a>
+                             </form>
+                      </div>
+                      
+                </div> 
+            
+            
+            <script type="text/javascript">
+                var x=document.getElementById("login");
+                var y=document.getElementById("register");
+                var z=document.getElementById("btn");
+
+               function register(){
+                    x.style.left="-400px";
+                    y.style.left="50px"
+                    z.style.left="110px"
+                }
+                function login(){
+                    x.style.left="50px";
+                    y.style.left="450px"
+                    z.style.left="0"
+                }
+                function validation(){
+                  var User=document.getElementById('user').vale;
+                  if(User==""){
+                      document.getElementById('username').innerHTML="please fill the User Id field";
+                  }
+                  return false;
+              }
+            </script>
+      
+</body>
+</html>
